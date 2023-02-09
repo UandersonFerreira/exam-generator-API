@@ -11,18 +11,18 @@ O cara com um parafuso a menos que colocou um curso desses gratuito foi esse aqu
 1. Mão na Massa 01 - Levantamento de Requisitos
 1. Mão na Massa 02 - [Back End] Criando o projeto e configurando o banco
 1. Mão na Massa 03 - [Back end] Gerando entidades Professor e ApplicationUser
-1. Mão na Massa 04 - 
-1. Mão na Massa 05 - 
-1. Mão na Massa 06 - 
-1. Mão na Massa 07 - 
-1. Mão na Massa 08 - 
-1. Mão na Massa 09 - 
-1. Mão na Massa 10 - 
-1. Mão na Massa 11 - 
-1. Mão na Massa 12 - 
-1. Mão na Massa 13 - 
-1. Mão na Massa 14 - 
-1. Mão na Massa 15 - 
+1. Mão na Massa 04 - [Back end] Authentication Filter
+1. Mão na Massa 05 - [Back end] Authorization Filter
+1. Mão na Massa 06 -
+1. Mão na Massa 07 -
+1. Mão na Massa 08 -
+1. Mão na Massa 09 -
+1. Mão na Massa 10 -
+1. Mão na Massa 11 -
+1. Mão na Massa 12 -
+1. Mão na Massa 13 -
+1. Mão na Massa 14 -
+1. Mão na Massa 15 -
 1. Mão na Massa 16 - 
 1. Mão na Massa 17 - 
 1. Mão na Massa 18 - 
