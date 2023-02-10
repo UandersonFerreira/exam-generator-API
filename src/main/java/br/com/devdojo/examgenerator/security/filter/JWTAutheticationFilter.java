@@ -51,12 +51,12 @@ public class JWTAutheticationFilter extends UsernamePasswordAuthenticationFilter
                 .plus(EXPIRATION_TIME, ChronoUnit.MILLIS);// ADICIONA mais 1day que o valor da constante que definimos em Milissegundos.
 
         String token = Jwts.builder()
-                .setSubject(((ApplicationUser) authResult.getPrincipal()).getUsername())//pegando o nome do usuário autenticado
+                .setSubject(((ApplicationUser) authResult.getPrincipal()).getUsername())//setando o nome do usuário autenticado
                 .setExpiration(Date.from(expTimeUTC.toInstant())) //setando uma instancia da data de expiração do token
                 .signWith(SignatureAlgorithm.HS256, SECRET) // a chave de assinatura específica do algoritmo a ser usada para validar o JWT
                 .compact(); // para mandar gerar o token
 
-        //{"token":"Bearer + token", "exp":"date"}
+        //{"token":"Bearer token", "exp":"date"}
         //"{\"token\":" + addQuotes(TOKEN_PREFIX + token) + ", \"exp\": "+ addQuotes(expTimeUTC.toString())+"}";
         token = TOKEN_PREFIX + token;
         String tokenJson = "{\"token\":" + addQuotes(token) + ", \"exp\": " + addQuotes(expTimeUTC.toString()) + "}";
@@ -72,6 +72,7 @@ public class JWTAutheticationFilter extends UsernamePasswordAuthenticationFilter
                 value +
                 "\"";
     }
+
 }//class
 
 /*

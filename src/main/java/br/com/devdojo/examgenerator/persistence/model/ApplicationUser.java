@@ -14,7 +14,18 @@ public class ApplicationUser extends AbstractEntity  {
             @OneToOne
             private Professor professor;
 
-            public String getUsername() {
+    public ApplicationUser(ApplicationUser applicationUser) {
+        //construtor recebendo ele mesmo para que seja possível a customização
+        //da class CustomUserDetails como sendo uma ApplicationUser.
+        this.username = applicationUser.username;
+        this.password = applicationUser.password;
+        this.professor = applicationUser.professor;
+    }
+
+    public ApplicationUser() {
+    }
+
+    public String getUsername() {
                 return username;
             }
 
