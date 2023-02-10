@@ -1,5 +1,6 @@
 package br.com.devdojo.examgenerator.persistence.model;
 
+<<<<<<< HEAD
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.OneToOne;
@@ -7,6 +8,13 @@ import javax.validation.constraints.NotEmpty;
 
 @Entity
 public class ApplicationUser extends AbstractEntity {
+=======
+import javax.persistence.*;
+import javax.validation.constraints.NotEmpty;
+
+@Entity
+public class ApplicationUser extends AbstractEntity{
+>>>>>>> origin/master
     @NotEmpty(message = "The field username cannot be empty")
     @Column(unique = true)
     private String username;
@@ -15,6 +23,7 @@ public class ApplicationUser extends AbstractEntity {
     @OneToOne
     private Professor professor;
 
+<<<<<<< HEAD
     public String getUsername() {
         return username;
     }
@@ -38,4 +47,7 @@ public class ApplicationUser extends AbstractEntity {
     public void setProfessor(Professor professor) {
         this.professor = professor;
     }
+=======
+
+>>>>>>> origin/master
 }//class
