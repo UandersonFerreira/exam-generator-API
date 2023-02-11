@@ -21,9 +21,9 @@ import static br.com.devdojo.examgenerator.security.filter.Constants.*;
 public class JWTAuthorizationFilter extends BasicAuthenticationFilter {
     private final CustomUserDetailsService customUserDetailsService;
 
-    public JWTAuthorizationFilter(AuthenticationManager authenticationManager, AuthenticationEntryPoint authenticationEntryPoint,
+    public JWTAuthorizationFilter(AuthenticationManager authenticationManager,
                                   CustomUserDetailsService customUserDetailsService) {
-        super(authenticationManager, authenticationEntryPoint);
+        super(authenticationManager);
         this.customUserDetailsService = customUserDetailsService;
     }
 

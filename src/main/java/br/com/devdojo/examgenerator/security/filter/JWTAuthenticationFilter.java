@@ -22,10 +22,10 @@ import java.time.temporal.ChronoUnit;
 
 import static br.com.devdojo.examgenerator.security.filter.Constants.*;
 
-public class JWTAutheticationFilter extends UsernamePasswordAuthenticationFilter {
+public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilter {
     private final AuthenticationManager authenticationManager;//Responsavel auntenticação
 
-    public JWTAutheticationFilter(AuthenticationManager authenticationManager) {
+    public JWTAuthenticationFilter(AuthenticationManager authenticationManager) {
         this.authenticationManager = authenticationManager;
     }
 
@@ -62,7 +62,7 @@ public class JWTAutheticationFilter extends UsernamePasswordAuthenticationFilter
         String tokenJson = "{\"token\":" + addQuotes(token) + ", \"exp\": " + addQuotes(expTimeUTC.toString()) + "}";
 
         response.getWriter().write(tokenJson); //adicionando/escrevendo o tokenJson em algum lugar da nossa resposta (HttpServletResponse)
-        response.addHeader("Content Type", "application/json;charset=UTF-8");// Add o Content Type ao cabeçalho da resposta
+        response.addHeader("Content-Type", "application/json;charset=UTF-8");// Add o Content Type ao cabeçalho da resposta
         response.addHeader(HEADER_STRING, token);//Add HEADER_STRING(Authorization) e o token ao cabeçalho da resposta
 
     }//method
@@ -76,7 +76,7 @@ public class JWTAutheticationFilter extends UsernamePasswordAuthenticationFilter
 }//class
 
 /*
-JWTAutheticationFilter -> Quem é você?
+JWTAuthenticationFilter -> Quem é você?
 
 request.getInputStream() -> pode lancar um IOException
 

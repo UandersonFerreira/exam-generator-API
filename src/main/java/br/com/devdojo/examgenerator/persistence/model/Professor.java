@@ -3,7 +3,6 @@ package br.com.devdojo.examgenerator.persistence.model;
 import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
-import java.io.Serializable;
 
 @Entity
 public class Professor extends AbstractEntity {

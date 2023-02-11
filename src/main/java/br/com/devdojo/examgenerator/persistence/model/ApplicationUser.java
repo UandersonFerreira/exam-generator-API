@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.OneToOne;
 import javax.validation.constraints.NotEmpty;
 
+@Entity
 public class ApplicationUser extends AbstractEntity  {
             @NotEmpty(message = "The field username cannot be empty")
             @Column(unique = true)
